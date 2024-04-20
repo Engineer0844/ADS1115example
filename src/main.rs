@@ -16,7 +16,7 @@ const DELAY_TIME: u64 = 200;
 const VOLTAGE_LIMIT: f32 = 6.5; 
 
 
-//this is nothing 
+//Stable 
 
 
 fn main() -> Result<(), Box<dyn Error>> {
