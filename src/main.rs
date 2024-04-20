@@ -6,17 +6,16 @@ use std::time::Duration;
 use rppal::i2c::I2c;
 
 // ADS1115 I2C address when ADDR pin pulled to ground
-const ADDR_ADS115: u16 = 0x48; 
-const ADDR_ADS115_TWO: u16 = 0x49; 
+const ADDR_ADS115:     u16 = 0x48; // Address of first ADS115 chip  
+const ADDR_ADS115_TWO: u16 = 0x49; // Address of second ADS115 chip
 
 // ADS115 register addresses.
 const REG_CONFIGURATION: u8 = 0x01;
 const REG_CONVERSION:    u8 = 0x00;
-const DELAY_TIME: u64 = 200; 
-const VOLTAGE_LIMIT: f32 = 6.5; 
+const DELAY_TIME:        u64 = 200; 
+const VOLTAGE_LIMIT:     f32 = 6.5; 
 
 
-//Stable 
 
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -47,8 +46,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     
     loop {
         
-       
-  
         get_adc0_value();
         get_adc1_value();
         get_adc2_value();
@@ -59,9 +56,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         get_adc2_2_value();
         get_adc3_2_value();
         println!("");
-        
-
-
         
         }
 }
